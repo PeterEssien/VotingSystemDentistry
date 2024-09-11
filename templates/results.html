@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voting Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body>
+    <h1>Department President Voting Results</h1>
+
+    <!-- Display total votes cast -->
+    <h2>Total Votes Cast: {{ total_votes }}</h2>
+
+    <table>
+        <tr>
+            <th>Candidate</th>
+            <th>Votes</th>
+        </tr>
+        {% for candidate in candidates %}
+        <tr>
+            <td>{{ candidate.name }}</td>
+            <td>{{ candidate.votes }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

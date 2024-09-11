@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Voting System</title>
+</head>
+<body>
+    <h1>Vote for Your Department President</h1>
+    <form action="/vote" method="POST">
+        <label for="student_id">Enter Student ID:</label>
+        <input type="text" id="student_id" name="student_id" required><br><br>
+
+        <label for="candidate">Choose a candidate:</label>
+        <select name="candidate" id="candidate">
+            <option value="1">Candidate 1</option>
+            <option value="2">Candidate 2</option>
+        </select><br><br>
+
+        <input type="submit" value="Vote">
+    </form>
+</body>
+</html>
